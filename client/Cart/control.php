@@ -1,0 +1,33 @@
+<?php
+class control_cart{
+	public $host = "34.200.32.20";
+	public $user = "giangnt";
+	public $password = "123@123a";
+	public $database = "turn_source";
+	public $conn;
+	
+	function __construct() {
+		$this->conn = $this->connectDB();
+	}
+	
+	function connectDB() {
+		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
+		return $conn;
+	}
+	
+	function runQuery($query) {
+		$result = mysqli_query($this->conn,$query);
+		while($row=mysqli_fetch_assoc($result)) {
+			$resultset[] = $row;
+		}		
+		if(!empty($resultset))
+			return $resultset;
+	}
+	
+	function numRows($query) {
+		$result  = mysqli_query($this->conn,$query);
+		$rowcount = mysqli_num_rows($result);
+		return $rowcount;	
+	}
+}
+?>

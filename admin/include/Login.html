@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="login">
+<form method="post" action="">
+<img width="300px" height="200px" src="../../image/pngtree-vector-add-user-icon-png-image_4102544.jpg" />
+<h1 style="font-style:100px; background-color:#999; color:#FFF; width:550px; height:65px" >Login</h1>
+<label style="background-color:#0F0;  color:#FFF; text-transform:uppercase; height:40px"> User name</label><input style="margin-left:10px; width:350px; height:30px" type="text" name="username" required placeholder="username" /><br /> <br />
+<label style=" height:40px;background-color:#0F0;  color:#FFF; text-transform:uppercase;"> Password</label><input style="margin-left:12px; width:350px; height:30px" type="password" name="password" required placeholder="password" /> <br /><br />
+<button style="background-color:#F00; width:100px; margin-left:200px; height:38px" type="submit" name="Login" value="Login"> Log In </button><br /><br /><br /><br /><br /><br />
+<p style="font-size:24px; background:#FFF; width:700px">If you don't have an account,
+<a href="sign up.html"> Sign up here </a>
+</p>
+</form>
+</div>
+<?php
+$conn = new MySQLi('localhost','root','', 'web_shop');
+if(!$conn)
+{
+	echo "Kết nối thất bại";
+}
+if(isset($_POST['login']))
+{
+	$username = $_POST['username']
+	$username = $_POST['password']
+    $result = mysql_query($conn, "select * from account where username='$username' and password='$password' ");
+    $check_login = mysql_num_rows($result);
+    $row_login = mysql_fetch_array($result);
+    if($check_login==0)
+    {
+    	echo "<script>alert('Password or username is incorrect, please try again !!!')</script>";
+    	exit();
+
+    }
+    if ($check_login > 0) {
+    	# code...
+    	echo "<script>alert('Login success !!!')</script>";
+    	 echo "<script>window('index.html','_self')</script>";
+
+    }
+}
+?>
+</body>
+</html>

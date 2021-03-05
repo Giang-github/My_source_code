@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_overview.htm -->
+<html lang="vi" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/osd.js.tải xuống"></script><script type="text/javascript" async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/publishertag.prebid.js.tải xuống"></script><style type="text/css">.mui-textfield.mui-textfield--float-label > label {-webkit-transition:all .15s ease-out;-moz-transition:all .15s ease-out;-o-transition:all .15s ease-out;transition:all .15s ease-out;}</style><style type="text/css">@keyframes mui-btn-inserted{from{transform:none;}to{transform:none;}}.mui-btn{animation-duration:0.0001s;animation-name:mui-btn-inserted;}@keyframes mui-dropdown-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-dropdown-inserted;}@keyframes mui-btn-inserted,mui-dropdown-inserted{from{transform:none;}to{transform:none;}}.mui-btn[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-btn-inserted,mui-dropdown-inserted;}@keyframes mui-tab-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="tab"]{animation-duration:0.0001s;animation-name:mui-tab-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > input{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > textarea{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-select-inserted{from{transform:none;}to{transform:none;}}.mui-select > select{animation-duration:0.0001s;animation-name:mui-select-inserted;}@keyframes mui-node-inserted{from{transform:none;}to{transform:none;}}.mui-select > select ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-inserted;}@keyframes mui-node-disabled{from{transform:none;}to{transform:none;}}.mui-select > select:disabled ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-disabled;}</style>
+<title>Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn</title>
+
+<meta name="description" content="System Analysis and Design - Overview - Systems development is systematic process which includes phases such as planning, analysis, design, deployment, and maintenance. Here, in this tutorial, we will">
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code">
+<link rel="canonical" href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_overview.htm">
+<link rel="shortcut icon" href="https://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/style-min-v1.css">
+<script async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async-ads.js.tải xuống"></script><script type="text/javascript" async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/js"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/script-min-v1.js.tải xuống"></script><link rel="stylesheet" type="text/css" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/prettify.css">
+<script>
+function printPage() { window.print(); }
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+</script>
+<script id="vi1" type="text/javascript" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(1)" defer="" async=""></script>
+<script id="vi2">
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+<script id="adp" data-cfasync="false" type="text/javascript">(function(w, d) {var cval = readCookie('subscription_purchased');if(cval == '1'){ return; } var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);
+</script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/adRecover.js.tải xuống" type="text/javascript" async=""></script>
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#00a19c;
+}
+a.demo {
+    background:#00a19c;
+}
+li.heading {
+    background:#00a19c;
+}
+.course-box{background:#00a19c}
+.home-intro-sub p{color:#00a19c}
+</style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/translateelement.css"><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/cse_element__en.js.tải xuống" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/default+en.css"><link type="text/css" rel="stylesheet" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/default.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(233,233,233,1),rgba(233,233,233,0))}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(2)"></script><script>window._BidFilter={site_id:1046,pbjsKey:'vlipb',checkAudio:false};</script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/bidfilter.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/prebid_v4.9.1.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/gpt.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/viPlayer_v34.min.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ima3.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/apstag.js.tải xuống"></script><script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/pubads_impl_2020092201.js.tải xuống" async=""></script><style>.vi-instream--container{position: relative;display: inline-block;}.vi-instream--play-handler{cursor:pointer;z-index:9997;position: absolute;background-color: rgba(0, 0, 0, 0.3); top: 0;left: 0; width: 100%;height: 100%;}.vi-instream--play-button{width: 100px; height: 100px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); fill:#282828;}.vi-instream--play-button g{fill: #fff;}</style><link rel="preload" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/f(9).txt" as="script"><script type="text/javascript" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/f(9).txt"></script><link rel="preload" href="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/f(10).txt" as="script"><script type="text/javascript" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/f(10).txt"></script><link rel="prefetch" href="https://6b986b948e0545acaf5343d2cabd929b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body>
+<header id="header" class="fixed">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv" style="display: none;">
+<div class="modal-window small">
+<span class="close" title="đóng"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span>
+<div class="pop-content">
+</div>
+<span class="msg"></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/loader.gif" alt="Điểm hướng dẫn" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="">
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Trang chủ"><i class="fal fa-home"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang Chủ</font></font></span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Việc làm</font></font></span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Công cụ - Công cụ kiểm tra và phát triển trực tuyến"><i class="fal fa-cogs"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Công cụ</font></font></span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - IDE và thiết bị đầu cuối trực tuyến miễn phí"><i class="fal fa-code"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coding Ground </font></font></span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Các vấn đề hiện tại hàng ngày"><i class="fal fa-layer-plus"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Công việc hiện tại</font></font></span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="Lưu ý về Kỳ thi IAS UPSC - TutorialsPoint"><i class="fal fa-user-tie"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ghi chú của UPSC</font></font></span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Gia sư trực tuyến hàng đầu - Tutor Connect"><i class="fal fa-user"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gia sư trực tuyến</font></font></span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Bảng trắng trực tuyến miễn phí"><i class="fal fa-chalkboard"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bảng trắng</font></font></span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="Một công cụ miễn phí cho hội nghị truyền hình trực tuyến"><i class="fal fa-chalkboard-teacher"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mạng lưới cuộc họp</font></font></span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com/" target="_blank" title="Tutorx - Ứng dụng học tập tốt nhất" rel="nofollow"><i class="fal fa-video"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tutorix</font></font></span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/login.php" target="_blank" title="Điểm hướng dẫn - Đăng nhập"><i class="fa fa-sign-in-alt"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đăng nhập</font></font></span></a> 
+</div>        
+<div class="top-menu-item qa login">
+<a href="https://www.tutorialspoint.com/videotutorials/subscription.php" target="_blank" title="Gói trả phí"><i class="fa fa-book-reader"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các gói</font></font></span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="hướng dẫn @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="hướng dẫn @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="hướng dẫn điểm YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1 sticky" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Điểm hướng dẫn">
+<img class="tp-logo" alt="điểm hướng dẫn" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thể loại </font></font><span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/academic_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hướng dẫn học thuật</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/big_data_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dữ liệu lớn &amp; Phân tích </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Lập trình máy tính </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Khoa học máy tính </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/database_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Cơ sở dữ liệu </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/devops_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> DevOps </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Tiếp thị kỹ thuật số </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/engineering_tutorials.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hướng dẫn Kỹ thuật </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Đề cương thi </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/famous_monuments.htm"><i class="fa fa-caret-right"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Di tích nổi tiếng </font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="https://www.tutorialspoint.com/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="https://www.tutorialspoint.com/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="https://www.tutorialspoint.com/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="https://www.tutorialspoint.com/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="https://www.tutorialspoint.com/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="https://www.tutorialspoint.com/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="https://www.tutorialspoint.com/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="https://www.tutorialspoint.com/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="https://www.tutorialspoint.com/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="https://www.tutorialspoint.com/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="https://www.tutorialspoint.com/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="https://www.tutorialspoint.com/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="https://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/f(11).txt"></script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="Tìm kiếm" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;" dir="ltr" spellcheck="false"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div class="gsc-results-close-btn" tabindex="0"></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div class="gsc-modal-background-image" tabindex="0"></div></div></div></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thư viện</font></font></span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Video</font></font></span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Q / A</font></font></span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com/"><i class="fal fa-book"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sách điện tử</font></font></span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown" type="button">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li class="login"><a href="https://www.tutorialspoint.com/videotutorials/login.php"><i class="fal fa-sign-in-alt"></i> <span>Login</span></a></li>
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com/"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/system-analysis-and-design-mini-logo.jpg" alt="Hướng dẫn Phân tích và Thiết kế Hệ thống">
+</div>
+<ul class="toc chapters">
+<li class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hướng dẫn Phân tích và Thiết kế Hệ thống</font></font></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/index.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích và thiết kế hệ thống - Trang chủ</font></font></a></li>
+<li style="background-color: rgb(214, 214, 214);"><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_overview.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích &amp; Thiết kế Hệ thống - Tổng quan</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_development_life_cycle.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chu kỳ hệ thống đời phát triển</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_planning.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lập kế hoạch hệ thống</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_structured.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích có cấu trúc</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_design.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thiết kế hệ thống</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_strategies.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chiến lược thiết kế</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_input_output_forms.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thiết kế đầu vào / đầu ra &amp; biểu mẫu</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_testing_quality_assurance.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kiểm tra và đảm bảo chất lượng</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_implementation_maintenance.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thực hiện &amp; Bảo trì</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_security_audit.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kiểm tra và bảo mật hệ thống</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_object_oriented_approach.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phương pháp tiếp cận hướng đối tượng</font></font></a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tài nguyên Phân tích &amp; Thiết kế Hệ thống</font></font></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_quick_guide.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hướng dẫn nhanh</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_useful_resources.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tài nguyên hữu ích</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_discussion.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thảo luận</font></font></a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đọc đã chọn</font></font></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lưu ý về Kỳ thi IAS UPSC</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các phương pháp hay nhất của nhà phát triển</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Câu hỏi và câu trả lời</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Viết sơ yếu lý lịch hiệu quả</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Câu hỏi phỏng vấn nhân sự</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thuật ngữ Máy tính</font></font></a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ai là ai</font></font></a></li>
+</ul>
+<div id="stickyparent" style="position: sticky;">
+<div style="height: 250px; width: 300px; top: 80px; position: fixed;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177" data-id="vi_9012177_477" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9012177_477" data-ad-slot="vi_9012177" isset-ad="1" content-type="ad" data-google-query-id="CN_E5s_ulewCFdeivQodk9MMOw" style="margin: 0px auto; width: 300px !important; height: 250px !important; position: relative !important;"><div id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_21_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_21_2" title="Nội dung quảng cáo của bên thứ 3" name="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_21_2" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="d" data-load-complete="true" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(30).html"></iframe></div><div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9012177_477" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(31).html"></iframe></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+<div id="_adr_abp_container_4" data-section="1c01c0744357ffb76525419d504c0a82" data-packetid="00000001-856ec0c6-9e7d-4000-a0cf-7746488c0f56" class="_adr_abp_container" style="display: block; clear: both; width: 300px; height: 264px; margin: 0px auto;"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; text-transform: uppercase; color: rgb(128, 129, 143); background-color: rgba(255, 255, 255, 0.3); line-height: 10px; padding: 2px 4px; width: 98%; height: 8px;"><span style="float: left; font-size: 9px; text-decoration: none; color: rgb(160, 160, 160);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quảng cáo</font></font></span></div><div id="ad-container-1c01c0744357ffb76525419d504c0a82" style="height: 250px; width: 100%; margin: 0px auto; text-align: center; display: none;"></div><iframe name="1c01c0744357ffb76525419d504c0a82" id="iframe-ad-container-1c01c0744357ffb76525419d504c0a82" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/recover.html" scrolling="no" style="width: 100%; height: 250px; margin: 0px; padding: 0px; border: none; display: block;"></iframe></div></div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích và thiết kế hệ thống - Tổng quan</font></font></h1>
+<hr>
+<div id="google-top-ads">
+<div class="top-ad-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quảng cáo</font></font></div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"><div class="adsbyvli" data-ad-slot="vi_9012178" data-id="vi_9012178_752" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9012178_752" data-ad-slot="vi_9012178" isset-ad="1" content-type="ad" data-google-query-id="COHd5s_ulewCFVVuvQod6GICwA" style="margin: 0px auto; width: 468px !important; height: 60px !important; position: relative !important;"><div id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_22_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_22_2" title="Nội dung quảng cáo của bên thứ 3" name="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_22_2" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e" data-load-complete="true" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(32).html"></iframe></div><div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9012178_752" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(33).html"></iframe></div></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/system_analysis_and_design/index.htm"><i class="fal fa-chevron-circle-left"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Trang trước</font></font></a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_development_life_cycle.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang tiếp theo </font></font><i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phát triển hệ thống là quá trình có hệ thống bao gồm các giai đoạn như lập kế hoạch, phân tích, thiết kế, triển khai và bảo trì. </font><font style="vertical-align: inherit;">Ở đây, trong hướng dẫn này, chúng tôi sẽ chủ yếu tập trung vào -</font></font></p>
+<ul class="list">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích hệ thống</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thiết kế hệ thống</font></font></li>
+</ul>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích hệ thống</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là một quá trình thu thập và diễn giải các dữ kiện, xác định các vấn đề và phân rã một hệ thống thành các thành phần của nó.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích hệ thống được thực hiện với mục đích nghiên cứu một hệ thống hoặc các bộ phận của nó để xác định các mục tiêu của nó. </font><font style="vertical-align: inherit;">Đây là một kỹ thuật giải quyết vấn đề nhằm cải thiện hệ thống và đảm bảo rằng tất cả các thành phần của hệ thống hoạt động hiệu quả để hoàn thành mục đích của chúng.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích xác định </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">những gì hệ thống phải làm</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thiết kế hệ thống</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là một quá trình lập kế hoạch một hệ thống kinh doanh mới hoặc thay thế một hệ thống hiện có bằng cách xác định các thành phần hoặc mô-đun của nó để thỏa mãn các yêu cầu cụ thể. </font><font style="vertical-align: inherit;">Trước khi lập kế hoạch, bạn cần tìm hiểu kỹ hệ thống cũ và xác định cách sử dụng máy tính tốt nhất để hoạt động hiệu quả.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thiết kế Hệ thống tập trung vào </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cách hoàn thành mục tiêu của hệ thống</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân tích và thiết kế hệ thống (SAD) chủ yếu tập trung vào -</font></font></p>
+<ul class="list">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quy trình</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Công nghệ</font></font></li>
+</ul>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống là gì?</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Từ System có nguồn gốc từ tiếng Hy Lạp Systema, có nghĩa là một mối quan hệ có tổ chức giữa bất kỳ tập hợp các thành phần nào để đạt được một số nguyên nhân hoặc mục tiêu chung.</font></font></p>
+<p><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống là “một nhóm có trật tự các thành phần phụ thuộc lẫn nhau được liên kết với nhau theo một kế hoạch để đạt được một mục tiêu cụ thể”.</font></font></i></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ràng buộc của một hệ thống</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống phải có ba ràng buộc cơ bản:</font></font></p>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống phải có một số </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cấu trúc và hành vi</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> được thiết kế để đạt được mục tiêu xác định trước.</font></font></p></li>
+<li><p><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Giữa</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> các thành phần hệ thống phải tồn tại tính </font><b><font style="vertical-align: inherit;">liên kết</font></b><font style="vertical-align: inherit;"> và </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phụ thuộc lẫn nhau</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mục tiêu của tổ chức</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> có </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mức độ ưu tiên cao</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> hơn các mục tiêu của hệ thống con của nó.</font></font></p></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ví dụ như hệ thống quản lý giao thông, hệ thống tính lương, hệ thống thư viện tự động, hệ thống thông tin nguồn nhân lực.</font></font></p>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thuộc tính của một hệ thống</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống có các thuộc tính sau:</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cơ quan</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tổ chức bao hàm cấu trúc và trật tự. </font><font style="vertical-align: inherit;">Chính việc sắp xếp các thành phần giúp đạt được các mục tiêu đã định trước.</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sự tương tác</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó được xác định theo cách thức mà các thành phần hoạt động với nhau.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ví dụ, trong một tổ chức, bộ phận mua hàng phải tương tác với bộ phận sản xuất và tính lương với bộ phận nhân sự.</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sự phụ thuộc lẫn nhau</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sự phụ thuộc lẫn nhau có nghĩa là cách các thành phần của hệ thống phụ thuộc vào nhau. </font><font style="vertical-align: inherit;">Để hoạt động tốt, các bộ phận được phối hợp và liên kết với nhau theo một kế hoạch xác định. </font><font style="vertical-align: inherit;">Đầu ra của một hệ thống con là yêu cầu của hệ thống con khác làm đầu vào.</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hội nhập</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tích hợp liên quan đến cách một thành phần hệ thống được kết nối với nhau. </font><font style="vertical-align: inherit;">Nó có nghĩa là các bộ phận của hệ thống làm việc cùng nhau trong hệ thống ngay cả khi mỗi bộ phận thực hiện một chức năng duy nhất.</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mục tiêu trung tâm</font></font></h3>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mục tiêu của hệ thống phải là trung tâm. </font><font style="vertical-align: inherit;">Nó có thể là thật hoặc đã nêu. </font><font style="vertical-align: inherit;">Không có gì lạ khi một tổ chức nêu một mục tiêu và hoạt động để đạt được mục tiêu khác.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Người dùng phải biết sớm mục tiêu chính của ứng dụng máy tính trong quá trình phân tích để thiết kế và chuyển đổi thành công.</font></font></p>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các yếu tố của một hệ thống</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sơ đồ sau đây cho thấy các phần tử của một hệ thống:</font></font></p>
+<img src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/system_elements.jpg" alt="Yếu tố hệ thống">
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đầu ra và đầu vào</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mục đích chính của một hệ thống là tạo ra một đầu ra hữu ích cho người sử dụng.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đầu vào là thông tin đưa vào hệ thống để xử lý.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đầu ra là kết quả của quá trình xử lý.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Các) bộ xử lý</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bộ xử lý là phần tử của hệ thống liên quan đến việc chuyển đổi thực tế đầu vào thành đầu ra.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là thành phần hoạt động của một hệ thống. </font><font style="vertical-align: inherit;">Bộ xử lý có thể sửa đổi toàn bộ hoặc một phần đầu vào, tùy thuộc vào đặc điểm kỹ thuật đầu ra.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Khi các thông số kỹ thuật đầu ra thay đổi, quá trình xử lý cũng vậy. </font><font style="vertical-align: inherit;">Trong một số trường hợp, đầu vào cũng được sửa đổi để cho phép bộ xử lý xử lý việc chuyển đổi.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Điều khiển</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phần tử điều khiển hướng dẫn hệ thống.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là hệ thống con ra quyết định kiểm soát mô hình hoạt động chi phối đầu vào, quá trình xử lý và đầu ra.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hành vi của một hệ thống máy tính được điều khiển bởi Hệ điều hành và phần mềm. </font><font style="vertical-align: inherit;">Để giữ cho hệ thống cân bằng, đầu vào cần những gì và bao nhiêu được xác định bởi Thông số kỹ thuật đầu ra.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phản hồi</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phản hồi cung cấp sự kiểm soát trong một hệ thống động.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phản hồi tích cực về bản chất là thường xuyên nhằm khuyến khích hoạt động của hệ thống.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phản hồi tiêu cực có bản chất là thông tin cung cấp cho người điều khiển thông tin để hành động.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Môi trường</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Môi trường là “siêu hệ thống” trong đó một tổ chức hoạt động.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là nguồn gốc của các yếu tố bên ngoài tấn công vào hệ thống.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó xác định cách một hệ thống phải hoạt động. </font><font style="vertical-align: inherit;">Ví dụ, các nhà cung cấp và đối thủ cạnh tranh trong môi trường của tổ chức, có thể đưa ra các ràng buộc ảnh hưởng đến hoạt động thực tế của doanh nghiệp.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ranh giới và Giao diện</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống nên được xác định bởi các ranh giới của nó. </font><font style="vertical-align: inherit;">Ranh giới là giới hạn xác định các thành phần, quy trình và mối quan hệ qua lại của nó khi nó giao tiếp với hệ thống khác.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mỗi hệ thống có các ranh giới xác định phạm vi ảnh hưởng và kiểm soát của nó.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kiến thức về ranh giới của một hệ thống nhất định là rất quan trọng trong việc xác định bản chất của giao diện của nó với các hệ thống khác để thiết kế thành công.</font></font></p></li>
+</ul>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các loại hệ thống</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các hệ thống có thể được chia thành các loại sau:</font></font></p>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống vật lý hoặc hệ thống trừu tượng</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống vật chất là những thực thể hữu hình. </font><font style="vertical-align: inherit;">Chúng ta có thể chạm và cảm nhận chúng.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống Vật lý có thể là tĩnh hoặc động về bản chất. </font><font style="vertical-align: inherit;">Ví dụ, bàn và ghế là bộ phận vật lý của trung tâm máy tính là bộ phận tĩnh. </font><font style="vertical-align: inherit;">Máy tính được lập trình là một hệ thống động trong đó các chương trình, dữ liệu và ứng dụng có thể thay đổi theo nhu cầu của người dùng.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống trừu tượng là các thực thể phi vật lý hoặc khái niệm có thể là công thức, biểu diễn hoặc mô hình của một hệ thống thực.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống mở hoặc đóng</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống mở phải tương tác với môi trường của nó. </font><font style="vertical-align: inherit;">Nó nhận đầu vào từ và đưa đầu ra ra bên ngoài hệ thống. </font><font style="vertical-align: inherit;">Ví dụ, một hệ thống thông tin phải thích ứng với các điều kiện môi trường thay đổi.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Một hệ thống đóng không tương tác với môi trường của nó. </font><font style="vertical-align: inherit;">Nó được cách ly khỏi ảnh hưởng của môi trường. </font><font style="vertical-align: inherit;">Một hệ thống hoàn toàn khép kín là rất hiếm trong thực tế.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thích ứng và không thích ứng</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thích ứng phản ứng với sự thay đổi của môi trường theo cách để cải thiện hiệu suất của họ và để tồn tại. </font><font style="vertical-align: inherit;">Ví dụ, con người, động vật.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống không thích ứng là hệ thống không phản ứng với môi trường. </font><font style="vertical-align: inherit;">Ví dụ, máy móc.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống vĩnh viễn hoặc tạm thời</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống vĩnh viễn tồn tại trong thời gian dài. </font><font style="vertical-align: inherit;">Ví dụ, các chính sách kinh doanh.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống Tạm thời được thực hiện trong thời gian quy định và sau đó chúng được phá bỏ. </font><font style="vertical-align: inherit;">Ví dụ, một hệ thống DJ được thiết lập cho một chương trình và nó được phổ biến sau chương trình.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống tự nhiên và sản xuất</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống tự nhiên được tạo ra bởi thiên nhiên. </font><font style="vertical-align: inherit;">Ví dụ, Hệ mặt trời, hệ thống theo mùa.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống Sản xuất là hệ thống do con người tạo ra. </font><font style="vertical-align: inherit;">Ví dụ: Tên lửa, đập, xe lửa.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống xác định hoặc xác suất</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống xác định hoạt động theo cách có thể dự đoán được và sự tương tác giữa các thành phần của hệ thống được biết đến một cách chắc chắn. </font><font style="vertical-align: inherit;">Ví dụ, hai phân tử hydro và một phân tử oxy tạo ra nước.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống xác suất cho thấy hành vi không chắc chắn. </font><font style="vertical-align: inherit;">Đầu ra chính xác không được biết. </font><font style="vertical-align: inherit;">Ví dụ, Dự báo thời tiết, gửi thư.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống xã hội, con người, máy móc</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống xã hội được tạo thành từ con người. </font><font style="vertical-align: inherit;">Ví dụ, câu lạc bộ xã hội, hội.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trong Hệ thống Con người-Máy móc, cả con người và máy móc đều tham gia để thực hiện một nhiệm vụ cụ thể. </font><font style="vertical-align: inherit;">Ví dụ, Lập trình máy tính.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống Máy móc là nơi mà sự can thiệp của con người bị bỏ qua. </font><font style="vertical-align: inherit;">Tất cả các tác vụ được thực hiện bởi máy. </font><font style="vertical-align: inherit;">Ví dụ, một robot tự động.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thông tin do con người tạo ra</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó là một tập hợp các nguồn thông tin được kết nối với nhau để quản lý dữ liệu cho một tổ chức cụ thể, dưới quyền Kiểm soát Quản lý Trực tiếp (DMC).</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống này bao gồm phần cứng, phần mềm, thông tin liên lạc, dữ liệu và ứng dụng để sản xuất thông tin theo nhu cầu của tổ chức.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thông tin do con người tạo ra được chia thành ba loại:</font></font></p></li>
+<li><p><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thông tin chính thức</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Nó dựa trên luồng thông tin dưới dạng bản ghi nhớ, hướng dẫn, v.v., từ cấp cao nhất đến cấp quản lý thấp hơn.</font></font></p></li>
+<li><p><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống thông tin không chính thức</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Đây là hệ thống dựa trên nhân viên để giải quyết các vấn đề liên quan đến công việc hàng ngày.</font></font></p></li>
+<li><p><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hệ thống dựa trên máy tính</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Hệ thống này phụ thuộc trực tiếp vào máy tính để quản lý các ứng dụng kinh doanh. </font><font style="vertical-align: inherit;">Ví dụ, hệ thống thư viện tự động, hệ thống đặt chỗ đường sắt, hệ thống ngân hàng, v.v.</font></font></p></li>
+</ul>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình hệ thống</font></font></h2>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình giản đồ</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình giản đồ là một biểu đồ 2-D thể hiện các yếu tố hệ thống và mối liên kết của chúng.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các mũi tên khác nhau được sử dụng để hiển thị luồng thông tin, luồng nguyên liệu và phản hồi thông tin.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình hệ thống dòng chảy</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình hệ thống dòng chảy cho thấy dòng chảy có trật tự của vật chất, năng lượng và thông tin giữ hệ thống lại với nhau.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ví dụ, Kỹ thuật Đánh giá và Xem xét Chương trình (PERT) được sử dụng để tóm tắt một hệ thống thế giới thực ở dạng mô hình.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình hệ thống tĩnh</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chúng đại diện cho một cặp quan hệ như </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hoạt động - thời gian</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> hoặc </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">chi phí - số lượng</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ví dụ, biểu đồ Gantt đưa ra một bức tranh tĩnh về mối quan hệ thời gian hoạt động.</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mô hình hệ thống động</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tổ chức kinh doanh là hệ thống động. </font><font style="vertical-align: inherit;">Mô hình động ước tính loại tổ chức hoặc ứng dụng mà các nhà phân tích xử lý.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó cho thấy một trạng thái liên tục, thay đổi liên tục của hệ thống. </font><font style="vertical-align: inherit;">Nó bao gồm -</font></font></p>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các đầu vào nhập vào hệ thống</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bộ xử lý mà thông qua đó quá trình chuyển đổi diễn ra</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Các) chương trình cần thiết để xử lý</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Các) đầu ra là kết quả của quá trình xử lý.</font></font></p></li>
+</ul></li>
+</ul>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Các loại thông tin</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Có ba loại thông tin liên quan đến các cấp quản lý và người quản lý đưa ra quyết định.</font></font></p>
+<img src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/information_category.jpg" alt="Thể loại thông tin">
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thông tin chiến lược</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thông tin này được ban lãnh đạo cao nhất yêu cầu đối với các chính sách lập kế hoạch tầm xa trong vài năm tới. </font><font style="vertical-align: inherit;">Ví dụ, xu hướng về doanh thu, đầu tư tài chính, nguồn nhân lực và sự gia tăng dân số.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loại thông tin này đạt được với sự hỗ trợ của Hệ thống Hỗ trợ Quyết định (DSS).</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thông tin quản lý</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loại Thông tin này được yêu cầu bởi quản lý cấp trung để lập kế hoạch trong phạm vi ngắn và trung gian theo tháng. </font><font style="vertical-align: inherit;">Ví dụ, phân tích doanh số bán hàng, dự báo dòng tiền và báo cáo tài chính hàng năm.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó đạt được với sự hỗ trợ của Hệ thống Thông tin Quản lý (MIS).</font></font></p></li>
+</ul>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thông tin hoạt động</font></font></h3>
+<ul class="list">
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loại thông tin này được yêu cầu bởi cấp quản lý thấp đối với việc lập kế hoạch hàng ngày và ngắn hạn để thực thi các hoạt động vận hành hàng ngày. </font><font style="vertical-align: inherit;">Ví dụ, lưu giữ hồ sơ tham gia của nhân viên, đơn đặt hàng quá hạn và số lượng hàng tồn kho hiện có.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nó đạt được với sự hỗ trợ của Hệ thống xử lý dữ liệu (DPS).</font></font></p></li>
+</ul>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/system_analysis_and_design/index.htm"><i class="fal fa-chevron-circle-left"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Trang trước</font></font></a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Trang in</font></font></a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_development_life_cycle.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang tiếp theo </font></font><i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="space-bottom" style="margin-bottom:20px;"></div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quảng cáo</font></font></div>
+<div>
+<div id="vi_bottom_ads"><div class="adsbyvli" data-ad-slot="vi_9013190" data-id="vi_9013190_517" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9013190_517" data-ad-slot="vi_9013190" isset-ad="1" content-type="ad" data-google-query-id="CP3X5s_ulewCFcoMvQodnzgE-g" style="width: 300px !important; height: 250px !important; margin: 0px auto !important; position: relative !important;"><div><div class="vliIconRp" style="background-color: rgb(255, 255, 255); cursor: pointer; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; height: 16px !important; width: 16px !important;"><div class="cbb" aria-hidden="true">
+                        <svg style="vertical-align: initial;display:block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#00aecd" viewBox="0 0 15 15">
+                            <path d="M7.5,1.5a6,6,0,1,0,0,12a6,6,0,1,0,0,-12m0,1a5,5,0,1,1,0,10a5,5,0,1,1,0,-10ZM6.625,11l1.75,0l0,-4.5l-1.75,0ZM7.5,3.75a1,1,0,1,0,0,2a1,1,0,1,0,0,-2Z" stroke-width="0.1" stroke="#00aecd"></path>
+                        </svg>
+                    </div></div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 18px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9013190_517" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(34).html"></iframe></div></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+<div id="_adr_abp_container_1" data-section="fee7792ac38de35ba76d18ce65a196e9" data-packetid="00000001-856ec0c6-9e7d-4000-a0cf-7746488c0f56" class="_adr_abp_container" style="display: block; clear: both; width: 300px; height: 264px; margin: 0px auto;"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; text-transform: uppercase; color: rgb(128, 129, 143); background-color: rgba(255, 255, 255, 0.3); line-height: 10px; padding: 2px 4px; width: 98%; height: 8px;"><span style="float: left; font-size: 9px; text-decoration: none; color: rgb(160, 160, 160);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quảng cáo</font></font></span></div><div id="ad-container-fee7792ac38de35ba76d18ce65a196e9" style="height: 250px; width: 100%; margin: 0px auto; text-align: center; display: none;"></div><iframe name="fee7792ac38de35ba76d18ce65a196e9" id="iframe-ad-container-fee7792ac38de35ba76d18ce65a196e9" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/recover(1).html" scrolling="no" style="width: 100%; height: 250px; margin: 0px; padding: 0px; border: none; display: block;"></iframe></div></div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value="">
+<div class="space-top"><div id="_adr_abp_container_2" data-section="d44f300a0c3b51404b3aabb2fba19f04" data-packetid="00000001-856ec0c6-9e7d-4000-a0cf-7746488c0f56" class="_adr_abp_container" style="display: block; clear: both; width: 300px; height: 264px; margin: 0px auto 10px;"></div></div><div id="_adr_abp_container_3" data-section="ea74549340d550a66ea0e5571fba1027" data-packetid="00000001-856ec0c6-9e7d-4000-a0cf-7746488c0f56" class="_adr_abp_container" style="display: block; clear: both; width: 300px; height: 264px; margin: 0px auto;"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"><div id="_adr_abp_container_2" data-section="d44f300a0c3b51404b3aabb2fba19f04" data-packetid="00000001-856ec0c6-9e7d-4000-a0cf-7746488c0f56" class="_adr_abp_container" style="display: block; clear: both; width: 300px; height: 264px; margin: 0px auto 10px;"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; text-transform: uppercase; color: rgb(128, 129, 143); background-color: rgba(255, 255, 255, 0.3); line-height: 10px; padding: 2px 4px; width: 98%; height: 8px;"><span style="float: left; font-size: 9px; text-decoration: none; color: rgb(160, 160, 160);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quảng cáo</font></font></span></div><div id="ad-container-d44f300a0c3b51404b3aabb2fba19f04" style="height: 250px; width: 100%; margin: 0px auto; text-align: center; display: none;"></div><iframe name="d44f300a0c3b51404b3aabb2fba19f04" id="iframe-ad-container-d44f300a0c3b51404b3aabb2fba19f04" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/recover(2).html" scrolling="no" style="width: 100%; height: 250px; margin: 0px; padding: 0px; border: none; display: block;"></iframe></div></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966" data-id="vi_9017966_393" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9017966_393" data-ad-slot="vi_9017966" isset-ad="1" content-type="ad" data-google-query-id="CMrD58_ulewCFcMrvQodKtcLIg" style="margin: 0px auto; width: 300px !important; height: 250px !important; position: relative !important;"><div id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_24_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_24_2" title="Nội dung quảng cáo của bên thứ 3" name="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_24_2" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="g" data-load-complete="true" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(35).html"></iframe></div><div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9017966_393" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(36).html"></iframe></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967" data-id="vi_9017967_452" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9017967_452" data-ad-slot="vi_9017967" isset-ad="1" content-type="ad" data-google-query-id="CLLV58_ulewCFVpsvQod124GKA" style="margin: 0px auto; width: 300px !important; height: 250px !important; position: relative !important;"><div id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_25_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_25_2" title="Nội dung quảng cáo của bên thứ 3" name="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_25_2" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="h" data-load-complete="true" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(37).html"></iframe></div><div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9017967_452" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(38).html"></iframe></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289" data-id="vi_9013289_440" style="display: block !important; position: relative !important; margin: 0px auto !important; z-index: 0 !important;"><div id="vi_9013289_440" data-ad-slot="vi_9013289" isset-ad="1" content-type="ad" data-google-query-id="CPbb58_ulewCFQMEvQodeJkKOw" style="width: 300px !important; height: 600px !important; margin: 0px auto; position: relative !important;"><div id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_26_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_26_2" title="Nội dung quảng cáo của bên thứ 3" name="google_ads_iframe_/21766281334/901_Tutorialspoint.com/901_Tutorialspoint.com_26_2" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="i" data-load-complete="true" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(39).html"></iframe></div><div><vli class="vliIcon" title="Truy cập valueimpression.com" style="cursor: pointer; opacity: 1 !important; padding: 0px !important; margin: 0px !important; border-top-right-radius: 5px !important; background-color: rgba(255, 255, 255, 0.9) !important; overflow: hidden !important; position: absolute !important; left: 0px !important; bottom: 0px !important; z-index: 9999 !important; transition: width 0.3s ease 0s, opacity 0.3s ease-in-out 0s !important; height: 16px !important; width: 16px !important;">
+                <vli style="display:block;width:132px;">
+                    <vli style="float:left;display:inline-block;height:14px;width:14px;padding:1px;">
+                        <vli style="display:block;width:14px;height:14px;">
+                            <vli style="display:inherit!important;margin-top:0.5px!important;width:14px!important;height:13px!important;background-image:url(&#39;//assets.bilsyndication.com/media/icon/vi-icon.svg&#39;)!important;background-size:cover!important;"></vli>
+                        </vli>
+                    </vli>
+                    <vli style="float:left;display:block;white-space:nowrap;height:12px;padding:2px;">
+                        <vli target="_blank" style="display:block;text-decoration:none;color:#333;font-family:Arial;line-height:8px;font-weight:400;" class="notranslate">
+                            <vli style="font-size:10px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Ad by</vli> <vli style="font-size:11px!important;font-family:inherit!important;line-height:8px;font-weight:400;">Valueimpression</vli>
+                        </vli>
+                    </vli>
+                    <vli style="clear:both;"></vli>
+                </vli>
+                </vli></div></div><iframe id="debug_vi_9013289_440" frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="width: 100%; height: 100%; position: absolute; background-color: rgba(255, 255, 255, 0.8); top: 0px; left: 0px; z-index: 10000; display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(40).html"></iframe></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/logo-black.png" alt="Điểm hướng dẫn" title="Điểm hướng dẫn"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Về chúng tôi</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Điều khoản sử dụng</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm"> <i class="fal fa-shield-check"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Chính sách bảo mật</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Câu hỏi thường gặp</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/teach-with-us.php"><i class="fa fa-user header-icons"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dạy với chúng tôi</font></font></a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Tiếp xúc</font></font></a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© Bản quyền 2020. Mọi quyền được bảo lưu.</font></font></div>
+</div>
+<script async="" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/js(1)"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+<script src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/text_menu.js.tải xuống"></script>
+<script>
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#vi1').remove();
+          $('#vi2').remove();
+          $('#adp').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/translate_24dp.png" width="20" height="20" alt="Google Dịch"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Văn bản gốc</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Đóng góp bản dịch hay hơn</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 194px; display: none; top: 116px; left: 1108px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><div id="vi_pixel_8383" style="width: 0px; height: 0px; display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(3)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(4)" style="display: none;"><iframe id="vi_track_8383" width="0" height="0" style="display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(41).html"></iframe><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(5)" style="display: none;"><iframe id="vi_track_8383" width="0" height="0" style="display: none;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(42).html"></iframe><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(6)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(7)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(8)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(9)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(10)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(11)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(12)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(13)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(14)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(15)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(16)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(17)" style="display: none;"><img width="0" height="0" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(18)" style="display: none;"></div><iframe src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/iu3.html" style="display: none;"></iframe><iframe src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/syncframe(3).html" id="criteo-syncframe" style="display: none;"></iframe><iframe id="google_osd_static_frame_8969612936317" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(43).html"></iframe></body><iframe sandbox="allow-scripts allow-same-origin" id="1002bcd44c9bbd37" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(3).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="101d7625ff8a9fa4" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1028aa72eec10977" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1038136f9b9e74cd" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1048dd90f0c91bb6" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1055d8f52a2c1448" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922(2).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1068f2f04bef2625" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="10765a7976e0f5" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="10822f4478497914" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(44).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="109a1799d1075633" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(45).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1103ea80f7a4b28" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922(3).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="111cc80daa6a20e5" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex(2).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="112c391da6372ed3" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync(2).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="113788252ef26ab2" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync(3).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="114eedb7aab915f6" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(46).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="115f26722c87c833" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync(4).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1160e971c2456944" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(47).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1175ff34d46061ba" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(48).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1186e8ba67fdfbf7" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(4).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1196d2772b8bf024" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922(4).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="120aa0327535fe4b" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/saved_resource(49).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1214b1c751870869" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(5).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1229d8de8f925945" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/async_usersync(5).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="12375eb6146f52f9" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(6).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="124fdc4e82b442b7" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/sirdata_20200922(5).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="125358f037b419c7" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(7).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="12695edeabb4ccb8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/ixmatch(8).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1279a5eda7478c74" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex(3).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1280633661300a24" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex(4).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="129955cf81262148" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Phân tích và thiết kế hệ thống - Tổng quan - Điểm hướng dẫn_files/quantumdex(5).html">
+    </iframe></html>
